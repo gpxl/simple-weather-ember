@@ -12,6 +12,10 @@ module.exports = function(environment) {
         // e.g. 'with-controller': true
       }
     },
+    contentSecurityPolicy: {
+      'connect-src': "'self' api.wunderground.com",
+      'img-src': "'self' icons.wxug.com",
+    },
 
     APP: {
       // Here you can pass flags/options to your application instance

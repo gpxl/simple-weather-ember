@@ -1,0 +1,53 @@
+<div class="container main">
+  <div class="row current">
+    <div class="text-center">
+      {{model.current_observation.display_location.full}}
+    </div>
+    <div class="col-xs-push-4 col-xs-4 col-sm-4 col-sm-push-4 text-center">
+      <img src="{{model.current_observation.icon_url}}">
+    </div>
+    <div class="col-xs-push-4 col-xs-4 col-sm-4 col-sm-push-4 text-center">
+      <h1>
+        {{model.current_observation.temp_f}}&deg;
+        <br>
+        <small>{{model.current_observation.weather}}</small>
+      </h1>
+
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-pull-8 text-center">
+      <h1>Today</h1>
+    </div>
+  </div>
+  <div class="row forecast">
+    {{#each model.forecast.days as |day|}}
+    <div class="col-xs-12 col-sm-4 text-center forecastday">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-8 col-xs-4 icon text-right">
+            <img src="{{day.icon_url}}">"
+          </div>
+          <div class="col-sm-4 col-sm-push-0 col-xs-4 col-xs-push-4 temp text-left">
+            {{day.high.fahrenheit}}&deg;
+          </div>
+          <div class="col-sm-12 col-sm-pull-0 col-xs-4 col-xs-pull-4 day">
+            {{day.date.weekday}}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <form {{action 'updateZip'}} class="form-inline text-center">
+    <div class="form-group">
+      <label for="zipcode">Zip Code</label>
+      <input type="text" name="zipcode" class="form-control" value="">
+      <button type="submit" class="btn btn-default">Change</button>
+    </div>
+  </form>
+</div>
+<nav class="footer navbar-fixed-bottom">
+  <div class="container text-center">
+    <small>Powered by</small>
+    <img src='http://icons.wxug.com/graphics/wu2/logo_130x80.png'>
+  </div>
+</nav>
