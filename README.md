@@ -1,7 +1,15 @@
-# Simple-weather-ember
+#[Simple Weather: Ember](https://simple-weather-rails.herokuapp.com)
+###A simple weather app using Ember 2 and the WUnderground API
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Given a zipcode, this will return the current conditions and 3 day forcast from WUnderground.
+
+##Variants
+* Simple Weather: Rails [repo](https://github.com/gpxl/simple-weather-rails) | [demo](http://simple-weather-rails.herokuapp.com)
+
+##Author
+- Email: gerlando@gmail.com
+- Twitter: http://twitter.com/gpxl
+- GitHub: https://github.com/gpxl
 
 ## Prerequisites
 
