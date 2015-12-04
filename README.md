@@ -1,5 +1,7 @@
-#[Simple Weather: Ember](https://simple-weather-rails.herokuapp.com)
+#Simple Weather: Ember
 ###A simple weather app using Ember 2 and the WUnderground API
+
+[demo](https://simple-weather-rails.herokuapp.com)
 
 Given a zipcode, this will return the current conditions and 3 day forcast from WUnderground.
 
