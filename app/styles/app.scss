@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.main {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+  padding-bottom: 155px;
+}
+.navbar-fixed-bottom {
+  position: relative;
+}
+
+.current {
+  padding: 20px 0;
+}
+.forecast {
+  .forecastday {
+    padding: 20px 0;
+  }
+}
+form {
+  padding: 20px 0;
+}
+.alert {
+  margin: 10px 0 0 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 769px)  {
+  .current {
+    border: 1px solid #ddd;
+    border-width: 0 1px 1px 1px;
+  }
+  .forecast .forecastday {
+    border: 1px solid #ddd;
+    border-width: 0 1px 1px 1px;
+    &:first-of-type {
+      border-width: 0 0 1px 1px;
+    }
+    &:last-of-type {
+      border-width: 0 1px 1px 0;
+    }
+  }
+}
+@media only screen and (max-width: 768px)  {
+  .container {
+    padding-left: 0;
+    padding-left: 0;
+  }
+  h1 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .forecast {
+    border-top: 1px solid #ddd;
+    .forecastday {
+      border-bottom: 1px solid #ddd;
+      .day, .temp {
+        padding-top: 15px;
+      }
+    }
+  }
+  .form-control, .form-group {
+    display: inline-block;
+    width: auto;
+  }
+}
