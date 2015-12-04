@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(params) {
     let zipcode = params.zipcode || '97212';
-    return $.getJSON(`http://api.wunderground.com/api/13fcb02d16148708/conditions/forecast/q/${zipcode}.json`);
+    return $.getJSON(`https://api.wunderground.com/api/13fcb02d16148708/conditions/forecast/q/${zipcode}.json`);
   },
 
   afterModel: function(model) {
