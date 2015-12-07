@@ -1,0 +1,17 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-6">
+      {{location-widget model=model.first_location location='first'}}
+    </div>
+    <div class="col-sm-6">
+      {{location-widget model=model.second_location location='second'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <div class="alert alert-warning">
+        There is a {{model.temperature_difference}}&deg; difference between these locations
+      </div>
+    </div>
+  </div>
+</div>
